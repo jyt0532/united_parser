@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import smtplib
-import time
 import getpass
 
 def send_email():
@@ -51,6 +50,4 @@ def check_available(pswd):
 
 if __name__ == "__main__":
     pswd = getpass.getpass('Password:')
-    while 1:
-        check_available(pswd)
-        time.sleep(60)
+    check_available(pswd)
